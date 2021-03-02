@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledColumn = styled.div`
-  width: 100%;
+  flex: ${({ flex }) => flex || 1};
   margin: 0 36px;
 `;
 

@@ -1,11 +1,27 @@
 import './App.css';
-import { Button, Input } from './components'
+import { Button, Input, Section, Row, Column } from './components'
+import background from './assets/images/background-marrom.png';
 
 function App() {
   return (
     <div className="App">
-      <Button>Enviar</Button>
-      <Input />
+      <Section backgroundImage={background}>
+        <Row>
+          <Column>
+            <Input />
+          </Column>
+        </Row>
+        <Row>
+          <Column>
+            <Input />
+          </Column>
+          <Column>
+            <Input />
+          </Column>
+        </Row>
+        <Button>Enviar</Button>
+
+      </Section>
     </div>
   );
 }

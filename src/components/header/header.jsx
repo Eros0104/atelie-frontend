@@ -1,8 +1,10 @@
 import React from "react";
-import { StyledSection } from "./header.styles";
+import { StyledHeader } from "./header.styles";
 
-const Section = ({ children, backgroundImage }) => (
-  <StyledSection backgroundImage={backgroundImage}>{children}</StyledSection>
+const Header = ({ children, backgroundImage }) => (
+  <StyledHeader backgroundImage={backgroundImage}>
+    {children}
+  </StyledHeader>
 );
 
-export default Section;
+export default Header;

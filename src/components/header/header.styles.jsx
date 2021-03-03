@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledSection = styled.div`
+const StyledHeader = styled.header`
   width: 100%;
   background: url(${({ backgroundImage }) => backgroundImage}) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -10,4 +10,4 @@ const StyledSection = styled.div`
   height: 1080px;
 `;
 
-export { StyledSection };
+export { StyledHeader };

@@ -22,11 +22,12 @@ const StyledButton = styled.button`
   height: 48px;
   font-weight: bold;
   font-size: 18px;
-  padding: 0 32px;
+  padding: 0 24px;
   border: 0px;
   text-transform: uppercase;
   transition: all 150ms;
   ${({ disabled }) => (disabled ? disabledStyle : defaultStyle)}
+  ${({ w100 }) => w100 && "width: 100%;"}
 `;
 
 export { StyledButton };

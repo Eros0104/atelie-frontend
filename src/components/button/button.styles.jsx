@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { colors } from "../../assets";
+import { colors, fontSize } from "@assets";
 
 const defaultStyle = css`
   background-color: ${colors.primary};
@@ -21,7 +21,7 @@ const StyledButton = styled.button`
   border-radius: 4px;
   height: 48px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: ${fontSize.button};
   padding: 0 24px;
   border: 0px;
   text-transform: uppercase;

@@ -1,6 +1,6 @@
 import './App.css';
 import { Button, Input, Section, Row, Column, Container } from '@components';
-import { Header } from '@custom-components';
+import { Header, Footer } from '@custom-components';
 import background from './assets/images/background-marrom.png';
 
 function App() {
@@ -33,6 +33,7 @@ function App() {
           <Button>Enviar</Button>
         </Container>
       </Section>
+      <Footer/>
     </div>
   );
 }

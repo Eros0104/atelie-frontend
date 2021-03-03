@@ -2,6 +2,7 @@ export { default as Alert } from "./alert/alert";
 export { default as Button } from "./button/button";
 export { default as Column } from "./column/column";
 export { default as Container } from "./container/container";
+export { default as Footer } from "./footer/footer";
 export { default as H1} from "./h1/h1";
 export { default as H2} from "./h2/h2";
 export { default as Header } from "./header/header";

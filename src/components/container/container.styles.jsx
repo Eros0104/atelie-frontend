@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import { breakpoints } from '@assets';
-
-const getWidth = ({ width }, breakpoint) => width && (width[breakpoint] || width.default)
 
 const StyledContainer = styled.div`
   margin: 0 auto;

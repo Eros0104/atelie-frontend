@@ -2,7 +2,7 @@ import React from "react";
 import { Header, Column, Row, Container, Image, Button } from "@components";
 import { headerBgImage, cloudsImage, logoCampanhaTaglineImage } from "@assets";
 
-const CustomHeader = () => (
+const CustomHeader = ({ onLoginClick, onRegisterClick }) => (
   <Header backgroundImage={headerBgImage}>
     <Container maxWidth={"1430px"}>
       <Row>
@@ -12,10 +12,10 @@ const CustomHeader = () => (
           </Row>
           <Row>
             <Column>
-              <Button w100>Login</Button>
+              <Button onClick={onLoginClick} w100>Login</Button>
             </Column>
             <Column>
-              <Button w100>Cadastre-se</Button>
+              <Button w100 onClick={onRegisterClick}>Cadastre-se</Button>
             </Column>
           </Row>
         </Column>

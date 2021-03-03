@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../assets";
+import { colors, fontSize } from "@assets";
 
 const StyledInput = styled.input`
   color: ${colors.white};
@@ -7,7 +7,7 @@ const StyledInput = styled.input`
   border-bottom: 4px solid ${colors.white};
   background: none;
   width: 100%;
-  font-size: 28pt;
+  font-size: ${fontSize.input};
   transition: all 150ms;
   :focus {
     outline: none;

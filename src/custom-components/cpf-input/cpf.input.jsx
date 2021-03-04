@@ -2,7 +2,7 @@ import React from 'react';
 import InputMask from 'react-input-mask';
 import { Input } from '@components';
 
-const CustomFooter = ({ name, ...props }) => (
+const CPF = ({ name, error, ...props }) => (
   <InputMask
     mask="999.999.999-99"
     disabled={false}
@@ -13,8 +13,9 @@ const CustomFooter = ({ name, ...props }) => (
       label="CPF"
       name={name}
       placeholder="000.000.000-00"
+      error={error} 
     />}
   </InputMask>
 );
 
-export default CustomFooter
+export default CPF

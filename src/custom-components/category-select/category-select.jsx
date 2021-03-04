@@ -16,12 +16,13 @@ const options = [
   },
 ]
 
-const CategorySelect = () => (
+const CategorySelect = ({ ...props }) => (
   <Select
     label="Classificação"
     placeholder="Escolha sua Categoria"
     required
     options={options}
+    {...props}
   />
 );
 

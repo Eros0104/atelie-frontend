@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import { Container, Input, Button, Grid, GridItem, H1, P } from '@components';
 import { CPFInput, CategorySelect } from '@custom-components';
+import { getEmptyCustomerObject } from '@utils';
+import { signUpCostumer } from "@services"
 
 const SignUpForm = () => {
-  const [data, setData] = useState({
-    name: "",
-    cpf: "",
-    email: "",
-    password: "",
-    passwordConfirm: "",
-    company: "",
-    classification: "",
-  });
+  const [data, setData] = useState(getEmptyCustomerObject());
   const [errorTree, setErrorTree] = useState({});
 
   const onChangeHandler = (evt) => {
@@ -22,7 +16,9 @@ const SignUpForm = () => {
   };
 
   const onSend = () => {
-    console.log(data)
+    const response = signUpCostumer(data)
+    console.log(response.errorTree)
+    setErrorTree(response.errorTree)
   }
 
   return (
@@ -92,7 +88,12 @@ const SignUpForm = () => {
           />
         </GridItem>
         <GridItem xs={12} md={6}>
-          <CategorySelect value={data.classification} error={errorTree.classification} />
+          <CategorySelect
+            value={data.classification} 
+            name="classification"
+            error={errorTree.classification} 
+            onChange={onChangeHandler}
+          />
         </GridItem>
         <GridItem center xs={12}>
           <Button onClick={onSend}>Enviar</Button>

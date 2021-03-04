@@ -1,41 +1,105 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Input, Button, Grid, GridItem, H1, P } from '@components';
-import { CPFInput } from '@custom-components';
+import { CPFInput, CategorySelect } from '@custom-components';
 
-const SignUpForm = () => (
-  <Container>
-    <H1 white>Cadastre-se</H1>
-    <P white>
-      Preencha os campos abaixo para validar
-      sua participação na campanha e concorrer aos prêmios.
+const SignUpForm = () => {
+  const [data, setData] = useState({
+    name: "",
+    cpf: "",
+    email: "",
+    password: "",
+    passwordConfirm: "",
+    company: "",
+    classification: "",
+  });
+  const [errorTree, setErrorTree] = useState({});
+
+  const onChangeHandler = (evt) => {
+    setData({
+      ...data,
+      [evt.target.name]: evt.target.value,
+    });
+  };
+
+  const onSend = () => {
+    console.log(data)
+  }
+
+  return (
+    <Container>
+      <H1 white>Cadastre-se</H1>
+      <P white>
+        Preencha os campos abaixo para validar
+        sua participação na campanha e concorrer aos prêmios.
     </P>
-    <Grid spacing={5}>
-      <GridItem xs={12}>
-        <Input label="Nome" placeholder="Nome" />
-      </GridItem>
-      <GridItem xs={12} md={6}>
-        <CPFInput />
-      </GridItem>
-      <GridItem xs={12} md={6}>
-        <Input label="E-mail" />
-      </GridItem >
-      <GridItem xs={12} md={6}>
-        <Input label="Senha" type="password" placeholder="Digite sua Senha" />
-      </GridItem>
-      <GridItem xs={12} md={6}>
-      <Input label="Senha" type="password" placeholder="Confirme sua Senha" />
-      </GridItem>
-      <GridItem xs={12} md={6}>
-        <Input label="Empresa" placeholder="Empresa" />
-      </GridItem>
-      <GridItem xs={12} md={6}>
-        <Input />
-      </GridItem>
-      <GridItem center xs={12}>
-        <Button>Enviar</Button>
-      </GridItem>
-    </Grid>
-  </Container>
-);
+      <Grid spacing={5}>
+        <GridItem xs={12}>
+          <Input
+            label="Nome"
+            name="name"
+            placeholder="Nome"
+            error={errorTree.name}
+            value={data.name}
+            onChange={onChangeHandler}
+          />
+        </GridItem>
+        <GridItem xs={12} md={6}>
+          <CPFInput
+            name="cpf"
+            error={errorTree.cpf} 
+            value={data.cpf} 
+            onChange={onChangeHandler}
+          />
+        </GridItem>
+        <GridItem xs={12} md={6}>
+          <Input
+            name="email"
+            label="E-mail"
+            error={errorTree.email}
+            onChange={onChangeHandler}
+          />
+        </GridItem >
+        <GridItem xs={12} md={6}>
+          <Input
+            label="Senha"
+            name="password"
+            type="password"
+            placeholder="Digite sua Senha"
+            error={errorTree.password}
+            value={data.password}
+            onChange={onChangeHandler}
+          />
+        </GridItem>
+        <GridItem xs={12} md={6}>
+          <Input
+            label="Senha"
+            name="passwordConfirm"
+            type="password"
+            placeholder="Confirme sua Senha"
+            error={errorTree.password}
+            value={data.passwordConfirm}
+            onChange={onChangeHandler}
+          />
+        </GridItem>
+        <GridItem xs={12} md={6}>
+          <Input
+            name="company"
+            label="Empresa"
+            placeholder="Empresa"
+            error={errorTree.company}
+            value={data.company}
+            onChange={onChangeHandler}
+          />
+        </GridItem>
+        <GridItem xs={12} md={6}>
+          <CategorySelect value={data.classification} error={errorTree.classification} />
+        </GridItem>
+        <GridItem center xs={12}>
+          <Button onClick={onSend}>Enviar</Button>
+        </GridItem>
+      </Grid>
+    </Container>
+  );
+};
 
 export default SignUpForm;

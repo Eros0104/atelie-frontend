@@ -13,4 +13,5 @@ export { default as Image } from './image/image';
 export { default as Input } from './input/input';
 export { default as P } from './p/p';
 export { default as Section } from './section/section';
+export { default as Select } from './select/select';
 export { default as Small } from './small/small';

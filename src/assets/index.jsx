@@ -1,7 +1,10 @@
 /* Style variables */
-export { default as breakpoints } from "./style-variables/breakpoints";
-export { default as colors } from "./style-variables/colors";
-export { default as fontSize } from "./style-variables/font-size";
+export { default as breakpoints } from './style-variables/breakpoints';
+export { default as colors } from './style-variables/colors';
+export { default as fontSize } from './style-variables/font-size';
+
+/* Material UI Theme */
+export { default as materialUiTheme } from './material-ui-theme/material-ui-theme.jsx';
 
 /* Images */
 export { default as brownBgImage } from './images/background-marrom.png';

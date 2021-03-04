@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from '@assets';
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -7,7 +8,10 @@ const StyledHeader = styled.header`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding-top: 110px;
+  padding-top: 100px;
+  @media only screen and (max-width: ${breakpoints.md}px) {
+    padding-bottom: 100px; 
+  }
 `;
 
 export { StyledHeader };

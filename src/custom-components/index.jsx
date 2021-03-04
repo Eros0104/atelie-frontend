@@ -1,3 +1,4 @@
+export { default as CategorySelect } from './category-select/category-select';
 export { default as CPFInput } from './cpf-input/cpf.input';
 export { default as Footer } from './footer/footer';
 export { default as Header } from './header/header';

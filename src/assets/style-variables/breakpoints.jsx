@@ -1,8 +1,9 @@
 const breakpoints = {
-  xs: "480px",
-  sm: "768px",
-  md: "1024px",
-  lg: "1200px",
+  xs: 0,
+  sm: 600,
+  md: 960,
+  lg: 1280,
+  xl: 1920,
 }
 
 export default breakpoints

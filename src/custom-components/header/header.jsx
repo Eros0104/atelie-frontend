@@ -18,7 +18,7 @@ const CustomHeader = ({ onSignInClick, onSignUpClick }) => (
         justify="center"
         alignItems="center"
       >
-        <GridItem xs={12} md={3}>
+        <GridItem center xs={12} md={3}>
           <Grid
             spacing={2}
             direction="row"
@@ -36,7 +36,7 @@ const CustomHeader = ({ onSignInClick, onSignUpClick }) => (
             </GridItem>
           </Grid>
         </GridItem>
-        <GridItem md={9}>
+        <GridItem md={12} lg={9}>
           <Hidden smDown>
             <Image image={cloudsImage} />
           </Hidden>

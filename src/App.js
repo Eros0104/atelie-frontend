@@ -1,30 +1,22 @@
-import './App.css';
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Section } from '@components';
 import { Header, Footer, SignUpForm, SignInForm } from '@custom-components';
 import background from './assets/images/background-marrom.png';
 import { MuiThemeProvider, createMuiTheme, StylesProvider } from '@material-ui/core/styles';
-import { colors } from '@assets';
+import { materialUiTheme } from '@assets';
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: colors.primary
-    }
-  }
-});
+const theme = createMuiTheme(materialUiTheme);
 
-const App = () => {
-  const [screen, setScreen] = useState(SignUpForm);
-  const sectionRef = useRef(null);
+function App() {
+  const [toggleScreen, setToggleScreen] = useState(false);
   const onSignInClick = () => {
-    setScreen(<SignInForm />);
+    setToggleScreen(true);
     document.getElementById('cadastro').scrollIntoView({
       behavior: 'smooth'
     });
   }
   const onSignUpClick = () => {
-    setScreen(<SignUpForm />);
+    setToggleScreen(false);
     document.getElementById('cadastro').scrollIntoView({
       behavior: 'smooth'
     });
@@ -34,8 +26,14 @@ const App = () => {
       <div className="App">
         <MuiThemeProvider theme={theme}>
           <Header onSignUpClick={onSignUpClick} onSignInClick={onSignInClick} />
-          <Section ref={sectionRef} id="cadastro" backgroundImage={background}>
-            {screen}
+          <Section id="cadastro" backgroundImage={background}>
+            {
+              toggleScreen ? (
+                <SignInForm />
+              ) : (
+                <SignUpForm />
+              )
+            }
           </Section>
           <Footer />
         </MuiThemeProvider>

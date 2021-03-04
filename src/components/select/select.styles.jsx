@@ -1,8 +1,11 @@
 import styled from 'styled-components';
-import TextField from '@material-ui/core/TextField';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
 import { colors, fontSize } from '@assets';
 
-const StyledInput = styled(TextField)`
+const StyledSelect = styled(Select)`
   label {
     font-size: ${fontSize.label};
   }
@@ -23,4 +26,10 @@ const StyledInput = styled(TextField)`
   }
 `;
 
-export { StyledInput };
+const StyledLabel = styled(InputLabel)``;
+
+const StyledItem = styled(MenuItem)``;
+
+const StyledFormControl = styled(FormControl)``;
+
+export { StyledSelect, StyledLabel, StyledItem, StyledFormControl };

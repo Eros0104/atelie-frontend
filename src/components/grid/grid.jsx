@@ -1,7 +1,7 @@
 import Grid from '@material-ui/core/Grid';
 
-const defaultGrid = ({ children, spacing }) => (
-  <Grid container spacing={spacing}>{children}</Grid>
+const defaultGrid = ({ children, ...props }) => (
+  <Grid container {...props}>{children}</Grid>
 )
 
 export default defaultGrid;

@@ -9,7 +9,6 @@ const StyledFooter = styled.footer`
   -o-background-size: cover;
   background-size: cover;
   text-align: justify;
-
 `;
 
 const MainFooter = styled.div`
@@ -21,6 +20,7 @@ const BottomContainer = styled.div`
   width: 100%;
   background-color: ${colors.primary};
   padding: 15px 0;
+  color: ${colors.white};
 `;
 
 export { StyledFooter, BottomContainer, MainFooter };

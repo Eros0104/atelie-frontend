@@ -7,6 +7,7 @@ export { default as GridItem } from "./grid-item/grid-item";
 export { default as H1 } from "./h1/h1";
 export { default as H2 } from "./h2/h2";
 export { default as Header } from "./header/header";
+export { default as Hyperlink } from "./hyperlink/hyperlink";
 export { default as Image } from "./image/image";
 export { default as Input } from "./input/input";
 export { default as P } from "./p/p";

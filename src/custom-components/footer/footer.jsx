@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer, Container, H2, Small, Grid, GridItem, Image } from "@components";
+import { Footer, Container, H2, Small, Grid, GridItem, Image, Hyperlink } from "@components";
 import { GrayBgImage, logoCampanhaImage } from "@assets";
 
 const CustomFooter = () => (
@@ -7,10 +7,10 @@ const CustomFooter = () => (
     <Footer.Main>
       <Container maxWidth="1100px">
         <Grid spacing={10}>
-          <GridItem md={9}>
+          <GridItem xs={12} md={8}>
             <H2>
               Só quem vende curte as<br />
-            experiências mais diferentonas!
+              experiências mais diferentonas!
           </H2>
             <Small>
               *Campanha válida de 01/02 a 31/03/2020.
@@ -25,20 +25,24 @@ const CustomFooter = () => (
               © 2020. Todos os direitos reservados.
           </Small>
           </GridItem>
-          <GridItem md={3}>
-            <Image image={logoCampanhaImage} />
+          <GridItem xs={12} md={4} center>
+            <Image maxWidth="300px" image={logoCampanhaImage} />
           </GridItem>
         </Grid>
       </Container>
     </Footer.Main>
     <Footer.Bottom>
       <Container maxWidth="1143px">
-        <Grid>
-          <GridItem>
-            Dúvidas? Envie um e-mail para atendimento@umbrindenaeuropa.com.br
+        <Grid justify="space-between" direction="row">
+          <GridItem xs={12} md={5} center>
+            <Small>
+              Dúvidas? Envie um e-mail para <Hyperlink href="mailto: atendimento@umbrindenaeuropa.com.br">atendimento@umbrindenaeuropa.com.br</Hyperlink>
+            </Small>
           </GridItem>
-          <GridItem>
-            Imagens meramente ilustrativas. Promoção válida de 01/02 a 31/03/2020.
+          <GridItem xs={12} md={5} center>
+            <Small>
+              Imagens meramente ilustrativas. Promoção válida de 01/02 a 31/03/2020.
+            </Small>
           </GridItem>
         </Grid>
       </Container>

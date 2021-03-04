@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 1080px;
+  padding-top: 110px;
 `;
 
 export { StyledHeader };

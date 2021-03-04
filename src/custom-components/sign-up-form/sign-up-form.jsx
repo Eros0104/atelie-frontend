@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Input, Button, Grid, GridItem, H1, P } from "@components";
 
-const SignUpForm = ({ onLoginClick, onRegisterClick }) => (
+const SignUpForm = () => (
   <Container>
     <H1 white>Cadastre-se</H1>
     <P white>

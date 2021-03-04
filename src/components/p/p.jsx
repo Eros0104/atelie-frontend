@@ -1,8 +1,8 @@
 import React from "react";
-import { StyledH1 } from "./p.styles";
+import { StyledP } from "./p.styles";
 
-const H1 = ({ children, ...props }) => (
-  <StyledH1 {...props}>{children}</StyledH1>
+const P = ({ children, white, ...props }) => (
+  <StyledP {...props} white={white} >{children}</StyledP>
 );
 
-export default H1;
+export default P;

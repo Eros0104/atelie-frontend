@@ -8,6 +8,7 @@ const sizes = {
   label: "19px",
   button: "18px",
   bottomFooter: "12px",
+  small: "10.5px",
 };
 
 export default sizes;

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledFooter, BottomContainer } from "./footer.styles";
+import { StyledFooter, BottomContainer, MainFooter } from "./footer.styles";
 
 const Footer = ({ children, backgroundImage }) => (
   <StyledFooter backgroundImage={backgroundImage}>
@@ -7,10 +7,16 @@ const Footer = ({ children, backgroundImage }) => (
   </StyledFooter>
 );
 
-Footer.Bottom = ({children}) => (
+Footer.Main = ({ children }) => (
+  <MainFooter>
+    {children}
+  </MainFooter>
+);
+
+Footer.Bottom = ({ children }) => (
   <BottomContainer>
     {children}
   </BottomContainer>
-);  
+);
 
 export default Footer;

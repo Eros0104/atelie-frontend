@@ -1,8 +1,14 @@
 import React from "react";
-import { StyledInput } from "./input.styles";
+import { StyledInput } from './input.styles';
 
 const Input = ({ children, ...props }) => (
-  <StyledInput {...props}>{children}</StyledInput>
+  <StyledInput
+    fullWidth
+    InputLabelProps={{
+      shrink: true,
+    }}
+    {...props}
+  />
 );
 
 export default Input;

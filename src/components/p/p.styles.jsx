@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { fontSize } from "@assets";
+import { fontSize, colors } from "@assets";
 
-const StyledH1 = styled.p`
+const StyledP = styled.p`
   font-size: ${fontSize.p};
+  ${({ white }) => white && `color: ${colors.white} ;`}
 `;
 
-export { StyledH1 };
+export { StyledP };

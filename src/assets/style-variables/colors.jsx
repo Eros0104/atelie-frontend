@@ -9,7 +9,7 @@ const colors = {
   veryLightGrey: "#F2F2F2",
   lightDanger: "#F59393",
   danger: "#F33232",
-  defaultFont: "#071723",
+  defaultFont: "#434445",
   success: "#00C57C"
 };
 

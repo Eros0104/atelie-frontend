@@ -8,7 +8,13 @@ const StyledFooter = styled.footer`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  text-align: left;
+  text-align: justify;
+
+`;
+
+const MainFooter = styled.div`
+  width: 100%;
+  padding: 60px 0;
 `;
 
 const BottomContainer = styled.div`
@@ -17,4 +23,4 @@ const BottomContainer = styled.div`
   padding: 15px 0;
 `;
 
-export { StyledFooter, BottomContainer };
+export { StyledFooter, BottomContainer, MainFooter };

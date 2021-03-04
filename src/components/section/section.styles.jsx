@@ -7,7 +7,7 @@ const StyledSection = styled.div`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding: 90px 0;
+  padding: 40px 0;
 `;
 
 export { StyledSection };

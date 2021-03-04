@@ -1,5 +1,6 @@
-import styled, { css } from "styled-components";
-import { colors, fontSize } from "@assets";
+import styled, { css } from 'styled-components';
+import { colors, fontSize } from '@assets';
+import Button from '@material-ui/core/Button';
 
 const defaultStyle = css`
   background-color: ${colors.primary};
@@ -16,7 +17,7 @@ const disabledStyle = css`
   border: 2px solid ${colors.darkGrey};
 `;
 
-const StyledButton = styled.button`
+/*const StyledButton = styled.button`
   color: ${colors.white};
   border-radius: 4px;
   height: 48px;
@@ -27,7 +28,12 @@ const StyledButton = styled.button`
   text-transform: uppercase;
   transition: all 150ms;
   ${({ disabled }) => (disabled ? disabledStyle : defaultStyle)}
-  ${({ w100 }) => w100 && "width: 100%;"}
+  ${({ w100 }) => w100 && 'width: 100%;'}
+`;*/
+
+const StyledButton = styled(Button)`
+  font-size: ${fontSize.button};
+  color: ${colors.white};
 `;
 
 export { StyledButton };

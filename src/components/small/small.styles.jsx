@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { fontSize } from "@assets";
+import styled from 'styled-components';
+import { fontSize } from '@assets';
 
 const StyledSmall = styled.small`
   font-size: ${fontSize.small};

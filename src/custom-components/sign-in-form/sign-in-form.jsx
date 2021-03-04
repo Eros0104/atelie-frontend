@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Input, Button, H1, P } from "@components";
+import React from 'react';
+import { Container, Input, Button, H1, P } from '@components';
 
 const SignUpForm = () => (
   <Container>

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { fontSize, colors } from "@assets";
+import styled from 'styled-components';
+import { fontSize, colors } from '@assets';
 
 const StyledH1 = styled.h1`
   font-size: ${fontSize.h1};

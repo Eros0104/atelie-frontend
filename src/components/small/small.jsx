@@ -1,5 +1,5 @@
-import React from "react";
-import { StyledSmall } from "./small.styles";
+import React from 'react';
+import { StyledSmall } from './small.styles';
 
 const Small = ({ children }) => (
   <StyledSmall>{children}</StyledSmall>

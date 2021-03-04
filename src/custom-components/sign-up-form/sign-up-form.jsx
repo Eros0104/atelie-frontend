@@ -1,5 +1,6 @@
-import React from "react";
-import { Container, Input, Button, Grid, GridItem, H1, P } from "@components";
+import React from 'react';
+import { Container, Input, Button, Grid, GridItem, H1, P } from '@components';
+import { CPFInput } from '@custom-components';
 
 const SignUpForm = () => (
   <Container>
@@ -13,24 +14,24 @@ const SignUpForm = () => (
         <Input label="Nome" placeholder="Nome" />
       </GridItem>
       <GridItem xs={12} md={6}>
-        <Input label="CPF" placeholder="000.000.000-00" />
+        <CPFInput />
       </GridItem>
       <GridItem xs={12} md={6}>
         <Input label="E-mail" />
       </GridItem >
       <GridItem xs={12} md={6}>
-        <Input />
+        <Input label="Senha" type="password" placeholder="Digite sua Senha" />
+      </GridItem>
+      <GridItem xs={12} md={6}>
+      <Input label="Senha" type="password" placeholder="Confirme sua Senha" />
+      </GridItem>
+      <GridItem xs={12} md={6}>
+        <Input label="Empresa" placeholder="Empresa" />
       </GridItem>
       <GridItem xs={12} md={6}>
         <Input />
       </GridItem>
-      <GridItem xs={12} md={6}>
-        <Input />
-      </GridItem>
-      <GridItem xs={12} md={6}>
-        <Input />
-      </GridItem>
-      <GridItem xs={12}>
+      <GridItem center xs={12}>
         <Button>Enviar</Button>
       </GridItem>
     </Grid>

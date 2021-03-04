@@ -1,5 +1,4 @@
 import Grid from '@material-ui/core/Grid';
-import PropTypes from 'prop-types'
 
 const defaultGrid = ({ children, center, ...props }) => (
   <Grid

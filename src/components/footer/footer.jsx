@@ -1,5 +1,5 @@
-import React from "react";
-import { StyledFooter, BottomContainer, MainFooter } from "./footer.styles";
+import React from 'react';
+import { StyledFooter, BottomContainer, MainFooter } from './footer.styles';
 
 const Footer = ({ children, backgroundImage }) => (
   <StyledFooter backgroundImage={backgroundImage}>

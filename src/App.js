@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react';
 import { Section } from '@components';
 import { Header, Footer, SignUpForm, SignInForm } from '@custom-components';
 import background from './assets/images/background-marrom.png';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme, StylesProvider } from '@material-ui/core/styles';
 import { colors } from '@assets';
 
 const theme = createMuiTheme({
@@ -14,8 +14,9 @@ const theme = createMuiTheme({
   }
 });
 
-function App() {
+const App = () => {
   const [screen, setScreen] = useState(SignUpForm);
+  const sectionRef = useRef(null);
   const onSignInClick = () => {
     setScreen(<SignInForm />);
     document.getElementById('cadastro').scrollIntoView({
@@ -29,15 +30,17 @@ function App() {
     });
   }
   return (
-    <div className="App">
-      <MuiThemeProvider theme={theme}>
-        <Header onSignUpClick={onSignUpClick} onSignInClick={onSignInClick} />
-        <Section id="cadastro" backgroundImage={background}>
-          {screen}
-        </Section>
-        <Footer />
-      </MuiThemeProvider>
-    </div>
+    <StylesProvider injectFirst>
+      <div className="App">
+        <MuiThemeProvider theme={theme}>
+          <Header onSignUpClick={onSignUpClick} onSignInClick={onSignInClick} />
+          <Section ref={sectionRef} id="cadastro" backgroundImage={background}>
+            {screen}
+          </Section>
+          <Footer />
+        </MuiThemeProvider>
+      </div>
+    </StylesProvider>
   );
 }
 

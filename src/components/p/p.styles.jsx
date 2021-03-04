@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { fontSize, colors } from "@assets";
+import styled from 'styled-components';
+import { fontSize, colors } from '@assets';
 
 const StyledP = styled.p`
   font-size: ${fontSize.p};

@@ -15,9 +15,9 @@ const SignUpForm = () => {
     });
   };
 
-  const onSend = () => {
-    const response = signUpCostumer(data)
-    console.log(response.errorTree)
+  const onSend = async () => {
+    const response = await signUpCostumer(data)
+    console.log(response.response)
     setErrorTree(response.errorTree)
   }
 

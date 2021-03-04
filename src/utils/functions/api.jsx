@@ -1,11 +1,7 @@
 import axios from 'axios';
 
-const baseURL = "virtserver.swaggerhub.com/ateliedepropaganda/";
+const baseURL = "https://virtserver.swaggerhub.com/ateliedepropaganda/register/1.0.0";
 
-const post = (url, data) => axios.post(baseURL+url, data)
-.then(res => {
-  const persons = res.data;
-  this.setState({ persons });
-})
+const post = async (url, data) => await axios.post(baseURL+url, data)
 
 export { post };

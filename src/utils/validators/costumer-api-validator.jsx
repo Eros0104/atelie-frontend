@@ -12,8 +12,10 @@ const getEmptyCustomerObject = () => ({
 
 const checkFields = (obj) => {
   for (let key in obj) {
-    if(key !== "")
+    if(obj[key] !== ""){
+     console.log(key)
       return false;
+    }
   }
   return true;
 }
@@ -38,6 +40,9 @@ const validateCostumer = (data) => {
   if (!data.company)
     errorTree.company = "Por favor preencha a Empresa!";
 
+  if(!data.classification)
+    errorTree.classification = "Escolha uma Classificação!"
+    
   return { errorTree: errorTree, isValid: checkFields(errorTree)};
 }
 

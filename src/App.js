@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Section } from '@components';
+import { Section, Modal } from '@components';
 import { Header, Footer, SignUpForm, SignInForm } from '@custom-components';
 import background from './assets/images/background-marrom.png';
 import { MuiThemeProvider, createMuiTheme, StylesProvider } from '@material-ui/core/styles';
@@ -9,6 +9,7 @@ const theme = createMuiTheme(materialUiTheme);
 
 function App() {
   const [toggleScreen, setToggleScreen] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
   const onSignInClick = () => {
     setToggleScreen(true);
     document.getElementById('cadastro').scrollIntoView({
@@ -22,9 +23,10 @@ function App() {
     });
   }
   return (
-    <StylesProvider injectFirst>
+    <StylesProvider injectFirst>      
       <div className="App">
         <MuiThemeProvider theme={theme}>
+          <Modal />   
           <Header onSignUpClick={onSignUpClick} onSignInClick={onSignInClick} />
           <Section id="cadastro" backgroundImage={background}>
             {

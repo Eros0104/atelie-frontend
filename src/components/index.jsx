@@ -1,4 +1,3 @@
-export { default as Alert } from './alert/alert';
 export { default as Button } from './button/button';
 export { default as Container } from './container/container';
 export { default as Footer } from './footer/footer';
@@ -11,6 +10,7 @@ export { default as Hidden } from './hidden/hidden';
 export { default as Hyperlink } from './hyperlink/hyperlink';
 export { default as Image } from './image/image';
 export { default as Input } from './input/input';
+export { default as Modal } from './modal/modal';
 export { default as P } from './p/p';
 export { default as Section } from './section/section';
 export { default as Select } from './select/select';

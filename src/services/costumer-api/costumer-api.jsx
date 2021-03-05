@@ -8,7 +8,6 @@ const signUpCostumer = async (data) => {
     return { errorTree: errorTree, response: response } 
   }
   else {
-    alert("erro")
     return { errorTree: errorTree, response: {}}
   }
 }

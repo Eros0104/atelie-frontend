@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyledInput } from './input.styles';
 
-const Input = ({ children, ...props }) => (
+const Input = ({ children, error, ...props }) => (
   <StyledInput
     fullWidth
+    error={error}
+    helperText={error}
     InputLabelProps={{
       shrink: true,
     }}

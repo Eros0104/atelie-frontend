@@ -6,27 +6,26 @@ import FormControl from '@material-ui/core/FormControl';
 import { colors, fontSize } from '@assets';
 
 const StyledSelect = styled(Select)`
-  label {
-    font-size: ${fontSize.label};
+  div:focus {
+    background: none;
   }
-  input{
-    font-size: ${fontSize.input}
-  }
-  input, label {
+  div{
+    font-size: ${fontSize.input};
     color: ${colors.white};
   }
-  div:before {
+
+  :before {
     border-bottom: ${colors.white} 3px solid;
   }
-  div:hover:not(.Mui-disabled)::before {
-    border-bottom: ${colors.white} 3px solid;
-  }
-  div:after {
+  after {
     border-bottom: ${colors.primary} 3px solid;
   }
 `;
 
-const StyledLabel = styled(InputLabel)``;
+const StyledLabel = styled(InputLabel)`
+  font-size: ${fontSize.label};
+  color: ${colors.white};
+`;
 
 const StyledItem = styled(MenuItem)``;
 

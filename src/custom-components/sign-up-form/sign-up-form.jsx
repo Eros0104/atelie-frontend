@@ -27,7 +27,7 @@ const SignUpForm = () => {
       <P white>
         Preencha os campos abaixo para validar
         sua participação na campanha e concorrer aos prêmios.
-    </P>
+      </P>
       <Grid spacing={5}>
         <GridItem xs={12}>
           <Input

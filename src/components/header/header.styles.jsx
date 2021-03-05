@@ -8,9 +8,9 @@ const StyledHeader = styled.header`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding-top: 110px;
+  padding-top: 50px;
   @media only screen and (max-width: ${breakpoints.lg}px) {
-    padding: 80px 0; 
+    padding-bottom: 80px; 
   }
 `;
 

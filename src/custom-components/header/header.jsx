@@ -9,10 +9,11 @@ import {
   Button,
   Hidden
 } from "@components";
+import { breakpoints } from '@assets'
 
 const CustomHeader = ({ onSignInClick, onSignUpClick }) => (
   <Header backgroundImage={headerBgImage}>
-    <Container maxWidth={"1430px"}>
+    <Container maxWidth={breakpoints.lg + "px"}>
       <Grid
         direction="row"
         justify="center"
@@ -28,10 +29,10 @@ const CustomHeader = ({ onSignInClick, onSignUpClick }) => (
             <GridItem xs={12} center>
               <Image image={logoCampanhaTaglineImage} maxWidth={"350px"} />
             </GridItem>
-            <GridItem xs={12} lg={6}>
+            <GridItem xs={12} lg={5}>
               <Button onClick={onSignInClick} w100>Login</Button>
             </GridItem>
-            <GridItem xs={12} lg={6}>
+            <GridItem xs={12} lg={7}>
               <Button onClick={onSignUpClick} w100>Cadastre-se</Button>
             </GridItem>
           </Grid>

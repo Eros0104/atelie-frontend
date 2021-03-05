@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Input, Button, H1, Grid, GridItem, Hyperlink, Small } from '@components';
+import { Input, Button, H1, Grid, GridItem, Hyperlink, Small } from '@components';
 import { CPFInput } from '@custom-components';
 import { getEmptyLoginObject } from '@utils';
 import { login } from "@services"
@@ -22,7 +22,7 @@ const SignInForm = () => {
   }
 
   return (
-    <Container>
+    <>
       <Grid spacing={5}>
         <GridItem xs={12} center>
           <H1 white>Login</H1>
@@ -66,10 +66,10 @@ const SignInForm = () => {
       </Grid>
       <Grid spacing={10}>
         <GridItem xs={12} center>
-          <Button onClick={onSend}>Enviar</Button>
+          <Button horizontalPadding="40px" onClick={onSend}>Enviar</Button>
         </GridItem>
       </Grid>
-    </Container>
+    </>
   );
 }
 

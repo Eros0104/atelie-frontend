@@ -1,10 +1,12 @@
 import React from 'react';
-import { StyledModal } from './modal.styles';
+import { StyledModal, Backdrop } from './modal.styles';
 
 const Modal = ({ children, isOpen }) => (
-  <StyledModal isOpen={isOpen}>
-    {children}
-  </StyledModal>
+  <Backdrop  isOpen={isOpen}>
+    <StyledModal>
+      {children}
+    </StyledModal>
+  </Backdrop>
 )
 
 export default Modal;

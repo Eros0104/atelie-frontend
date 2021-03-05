@@ -1,41 +1,38 @@
 import React, { useState } from 'react';
-import { Section, Modal } from '@components';
+import { Section, Container } from '@components';
 import { Header, Footer, SignUpForm, SignInForm } from '@custom-components';
 import background from './assets/images/background-marrom.png';
 import { MuiThemeProvider, createMuiTheme, StylesProvider } from '@material-ui/core/styles';
 import { materialUiTheme } from '@assets';
+import { scrollTo } from '@utils'
 
 const theme = createMuiTheme(materialUiTheme);
 
 function App() {
   const [toggleScreen, setToggleScreen] = useState(false);
-  const [isModalOpen, setModalOpen] = useState(false);
   const onSignInClick = () => {
     setToggleScreen(true);
-    document.getElementById('cadastro').scrollIntoView({
-      behavior: 'smooth'
-    });
+    scrollTo('cadastro');
   }
   const onSignUpClick = () => {
     setToggleScreen(false);
-    document.getElementById('cadastro').scrollIntoView({
-      behavior: 'smooth'
-    });
+    scrollTo('cadastro');
   }
   return (
-    <StylesProvider injectFirst>      
+    <StylesProvider injectFirst>
       <div className="App">
         <MuiThemeProvider theme={theme}>
-          <Modal />   
           <Header onSignUpClick={onSignUpClick} onSignInClick={onSignInClick} />
           <Section id="cadastro" backgroundImage={background}>
-            {
-              toggleScreen ? (
-                <SignInForm />
-              ) : (
-                <SignUpForm />
-              )
-            }
+            <Container>
+              {
+                toggleScreen ? (
+                  <SignInForm />
+                ) : (
+                   <SignUpForm />
+                )
+              }
+            </Container>
           </Section>
           <Footer />
         </MuiThemeProvider>

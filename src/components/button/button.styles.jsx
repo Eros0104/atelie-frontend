@@ -6,7 +6,7 @@ const StyledButton = styled(Button)`
   font-size: ${fontSize.button};
   color: ${colors.white};
   font-weight: 900;
-  padding: 6px;
+  padding: 6px ${({ horizontalPadding }) => horizontalPadding};
 `;
 
 export { StyledButton };

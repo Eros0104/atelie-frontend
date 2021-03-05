@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import { Container, Input, Button, Grid, GridItem, H1, P } from '@components';
+import { Input, Button, Grid, GridItem, H1, P, Modal } from '@components';
 import { CPFInput, CategorySelect } from '@custom-components';
 import { getEmptyCustomerObject } from '@utils';
 import { signUpCostumer } from "@services"
 
 const SignUpForm = () => {
   const [data, setData] = useState(getEmptyCustomerObject());
+  const [modal,setModal] = useState({
+    isOpen: false,
+    message: "",
+  });
   const [errorTree, setErrorTree] = useState({});
 
   const onChangeHandler = (evt) => {
@@ -18,11 +22,20 @@ const SignUpForm = () => {
   const onSend = async () => {
     const response = await signUpCostumer(data)
     console.log(response.response)
+    if (response.response.status === 201) {
+      setModal({
+        isOpen: true,
+        message: "Cadastrado com sucesso!"
+      })
+    }
     setErrorTree(response.errorTree)
   }
 
   return (
-    <Container>
+    <>
+      <Modal isOpen={modal.isOpen}>
+        {modal.message}
+      </Modal>
       <Grid spacing={5}>
         <GridItem xs={12} center>
           <H1 white>Cadastre-se</H1>
@@ -101,10 +114,10 @@ const SignUpForm = () => {
           />
         </GridItem>
         <GridItem center xs={12}>
-          <Button onClick={onSend}>Enviar</Button>
+          <Button horizontalPadding="40px" onClick={onSend}>Enviar</Button>
         </GridItem>
       </Grid>
-    </Container>
+    </>
   );
 };
 

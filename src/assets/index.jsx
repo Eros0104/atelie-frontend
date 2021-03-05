@@ -15,4 +15,4 @@ export { default as logoCampanhaTaglineImage } from './images/logo-campanha-red-
 export { default as logoCampanhaImage } from './images/logo-campanha-red.png'
 
 /* Icons */
-export { ReactComponent as CloseIcon } from './icons/times-solid.svg';
+export { ReactComponent as CloseIcon } from './icons/close.svg';

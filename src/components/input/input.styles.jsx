@@ -9,6 +9,9 @@ const StyledInput = styled(TextField)`
   input{
     font-size: ${fontSize.input}
   }
+  input:placeholder {
+    color: ${colors.white};
+  }
   input, label {
     color: ${colors.white};
   }

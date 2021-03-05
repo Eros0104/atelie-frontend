@@ -13,7 +13,12 @@ const StyledSelect = styled(Select)`
     font-size: ${fontSize.input};
     color: ${colors.white};
   }
-
+  svg{
+    color: ${colors.white};
+  }
+  :hover:not(.Mui-disabled)::before {
+    border-bottom: ${colors.white} 3px solid;
+  }
   :before {
     border-bottom: ${colors.white} 3px solid;
   }

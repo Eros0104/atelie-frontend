@@ -2,7 +2,7 @@ import React from 'react';
 import InputMask from 'react-input-mask';
 import { Input } from '@components';
 
-const CPF = ({ name, error, ...props }) => (
+const CPF = ({ name, error, noLabel, placeholder, ...props }) => (
   <InputMask
     mask="999.999.999-99"
     disabled={false}
@@ -10,9 +10,9 @@ const CPF = ({ name, error, ...props }) => (
     {...props}
   >
     {() => <Input
-      label="CPF"
+      label={!noLabel && "CPF"}
       name={name}
-      placeholder="000.000.000-00"
+      placeholder={placeholder || "000.000.000-00"}
       error={error} 
     />}
   </InputMask>

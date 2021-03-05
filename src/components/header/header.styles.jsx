@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
   -o-background-size: cover;
   background-size: cover;
   padding-top: 110px;
-  @media only screen and (max-width: ${breakpoints.md}px) {
+  @media only screen and (max-width: ${breakpoints.lg}px) {
     padding: 80px 0; 
   }
 `;

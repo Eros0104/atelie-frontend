@@ -28,16 +28,16 @@ const CustomHeader = ({ onSignInClick, onSignUpClick }) => (
             <GridItem xs={12} center>
               <Image image={logoCampanhaTaglineImage} maxWidth={"350px"} />
             </GridItem>
-            <GridItem xs={12} sm={6} lg={6}>
+            <GridItem xs={12} lg={6}>
               <Button onClick={onSignInClick} w100>Login</Button>
             </GridItem>
-            <GridItem xs={12} sm={6} lg={6}>
+            <GridItem xs={12} lg={6}>
               <Button onClick={onSignUpClick} w100>Cadastre-se</Button>
             </GridItem>
           </Grid>
         </GridItem>
         <GridItem md={12} lg={9}>
-          <Hidden smDown>
+          <Hidden mdDown>
             <Image image={cloudsImage} />
           </Hidden>
         </GridItem>

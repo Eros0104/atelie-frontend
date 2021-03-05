@@ -23,12 +23,16 @@ const SignUpForm = () => {
 
   return (
     <Container>
-      <H1 white>Cadastre-se</H1>
-      <P white>
-        Preencha os campos abaixo para validar
-        sua participação na campanha e concorrer aos prêmios.
-      </P>
       <Grid spacing={5}>
+        <GridItem xs={12} center>
+          <H1 white>Cadastre-se</H1>
+        </GridItem>
+        <GridItem xs={12} center>
+          <P white>
+            Preencha os campos abaixo para validar
+            sua participação na campanha e concorrer aos prêmios.
+          </P>
+        </GridItem>
         <GridItem xs={12}>
           <Input
             label="Nome"
@@ -42,13 +46,14 @@ const SignUpForm = () => {
         <GridItem xs={12} md={6}>
           <CPFInput
             name="cpf"
-            error={errorTree.cpf} 
-            value={data.cpf} 
+            error={errorTree.cpf}
+            value={data.cpf}
             onChange={onChangeHandler}
           />
         </GridItem>
         <GridItem xs={12} md={6}>
           <Input
+            placeholder="E-mail"
             name="email"
             label="E-mail"
             error={errorTree.email}
@@ -89,9 +94,9 @@ const SignUpForm = () => {
         </GridItem>
         <GridItem xs={12} md={6}>
           <CategorySelect
-            value={data.classification} 
+            value={data.classification}
             name="classification"
-            error={errorTree.classification} 
+            error={errorTree.classification}
             onChange={onChangeHandler}
           />
         </GridItem>

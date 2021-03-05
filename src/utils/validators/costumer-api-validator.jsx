@@ -1,4 +1,4 @@
-import { isCPFValid, isEmailValid } from '@utils';
+import { isCPFValid, isEmailValid, isObjectFieldsEmpty } from '@utils';
 
 const getEmptyCustomerObject = () => ({
   name: "",
@@ -9,16 +9,6 @@ const getEmptyCustomerObject = () => ({
   company: "",
   classification: "",
 });
-
-const checkFields = (obj) => {
-  for (let key in obj) {
-    if(obj[key] !== ""){
-     console.log(key)
-      return false;
-    }
-  }
-  return true;
-}
 
 const validateCostumer = (data) => {
   const errorTree = getEmptyCustomerObject();
@@ -43,7 +33,7 @@ const validateCostumer = (data) => {
   if(!data.classification)
     errorTree.classification = "Escolha uma Classificação!"
     
-  return { errorTree: errorTree, isValid: checkFields(errorTree)};
+  return { errorTree: errorTree, isValid: isObjectFieldsEmpty(errorTree)};
 }
 
 export { getEmptyCustomerObject, validateCostumer };

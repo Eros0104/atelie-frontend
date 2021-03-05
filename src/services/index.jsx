@@ -1,1 +1,2 @@
-export { signUpCostumer } from './costumer-api/costumer-api';
+export { signUpCostumer } from './costumer-api';
+export { login } from './login-api';

@@ -22,7 +22,7 @@ const StyledSelect = styled(Select)`
   :before {
     border-bottom: ${colors.white} 3px solid;
   }
-  after {
+  :after {
     border-bottom: ${colors.primary} 3px solid;
   }
 `;

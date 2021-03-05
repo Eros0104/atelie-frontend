@@ -13,3 +13,6 @@ export { default as GrayBgImage } from './images/background-cinza.png'
 export { default as headerBgImage } from './images/background.png'
 export { default as logoCampanhaTaglineImage } from './images/logo-campanha-red-tagline.png'
 export { default as logoCampanhaImage } from './images/logo-campanha-red.png'
+
+/* Icons */
+export { ReactComponent as CloseIcon } from './icons/times-solid.svg';

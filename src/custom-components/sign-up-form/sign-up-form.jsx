@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Input, Button, Grid, GridItem, H1, P, Modal } from '@components';
+import { Input, Button, Grid, GridItem, H1, H2, P, Modal } from '@components';
 import { CPFInput, CategorySelect } from '@custom-components';
 import { getEmptyCustomerObject } from '@utils';
 import { signUpCostumer } from "@services"
 
 const SignUpForm = () => {
   const [data, setData] = useState(getEmptyCustomerObject());
-  const [modal,setModal] = useState({
+  const [modal, setModal] = useState({
     isOpen: false,
     message: "",
   });
@@ -19,13 +19,17 @@ const SignUpForm = () => {
     });
   };
 
+  const closeModal = () => {
+    setModal({ isOpen: false, message: "" })
+  }
+
   const onSend = async () => {
     const response = await signUpCostumer(data)
     console.log(response.response)
     if (response.response.status === 201) {
       setModal({
         isOpen: true,
-        message: "Cadastrado com sucesso!"
+        message: "Cadastrado realizado com sucesso!"
       })
     }
     setErrorTree(response.errorTree)
@@ -33,8 +37,10 @@ const SignUpForm = () => {
 
   return (
     <>
-      <Modal isOpen={modal.isOpen}>
-        {modal.message}
+      <Modal isOpen={modal.isOpen} onClose={closeModal}>
+        <H2 white center>
+          {modal.message}
+        </H2>
       </Modal>
       <Grid spacing={5}>
         <GridItem xs={12} center>

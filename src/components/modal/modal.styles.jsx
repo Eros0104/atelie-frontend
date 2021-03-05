@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '@assets';
+import { colors, CloseIcon } from '@assets';
 
 const Backdrop = styled.div`
 	z-index: 10;
@@ -15,15 +15,28 @@ const Backdrop = styled.div`
 const StyledModal = styled.div`
   position:fixed;
   background: antiquewhite;
-  width: 33%;
+  width: 100%;
+  margin: 5px;
+  max-width:710px;
   height: auto;
-  border-radius: 10px;
-  padding: 0.75rem;
+  border-radius: 3px;
+  padding: 20px 30px 30px;
   color: rgba(0,0,139, 0.7);
   top: 10%;
   left: 50%;
   transform: translate(-50%,0);
   background-color: ${colors.primary};
+  box-sizing: border-box;
 `;
 
-export { StyledModal, Backdrop };
+const Header = styled.div`
+  text-align: right;
+`;
+
+const Icon = styled(CloseIcon)`
+  color: ${colors.white};
+  cursor: pointer;
+  height: 40px;
+`;
+
+export { StyledModal, Backdrop, Header, Icon };

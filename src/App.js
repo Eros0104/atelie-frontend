@@ -29,7 +29,7 @@ function App() {
                 toggleScreen ? (
                   <SignInForm />
                 ) : (
-                   <SignUpForm />
+                  <SignUpForm />
                 )
               }
             </Container>

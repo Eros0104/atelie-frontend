@@ -6,7 +6,7 @@ const CustomFooter = () => (
   <Footer backgroundImage={GrayBgImage}>
     <Footer.Main>
       <Container maxWidth="1100px">
-        <Grid spacing={10}>
+        <Grid>
           <GridItem xs={12} md={8}>
             <H2>
               Só quem vende curte as<br />
@@ -26,7 +26,7 @@ const CustomFooter = () => (
           </Small>
           </GridItem>
           <GridItem xs={12} md={4} center>
-            <Image maxWidth="300px" image={logoCampanhaImage} />
+            <Image maxWidth="300px" margin="20px 0 0" image={logoCampanhaImage} />
           </GridItem>
         </Grid>
       </Container>
